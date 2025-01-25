@@ -48,8 +48,7 @@ This project is a Task Manager application built with Flutter. The application a
 - **lib/widgets/`**
     - `custom_textform_field.dart`: A reusable custom text form field widget.
     - `task_list.dart`: A widget for all tasks.
-    - `task_card.dart`: A widget that represents a single task in the list.
-    - `task_item.dart`: A widget for individual task item.
+    - `task_item.dart`: A widget that represents a single task in the list.
 - **lib/utils/`**
     - `format_date.dart`: Utility function for formatting dates.
 
