@@ -22,8 +22,8 @@ This project is a Task Manager application built with Flutter. The application a
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/your-username/task-manager.git
-    cd task-manager
+    git clone https://github.com/Raychy/task_manager.git
+    cd task_manager
     ```
 
 2. **Install dependencies:**
