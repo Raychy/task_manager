@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_manager/providers/task_provider.dart';
-import 'package:task_manager/screens/task_list_screen.dart';
+import 'package:task_manager/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,15 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => TaskProvider()..loadTasks(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => TaskProvider()),
+      ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Task Manager',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.purple,
           hintColor: Colors.green,
           textTheme: const TextTheme(
             displayLarge: TextStyle(
@@ -28,12 +31,12 @@ class MyApp extends StatelessWidget {
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
-              backgroundColor: Colors.blue,
+              backgroundColor: Colors.purple,
               textStyle: const TextStyle(fontSize: 16.0),
             ),
           ),
         ),
-        home: TaskListScreen(),
+        home: const HomeScreen(),
       ),
     );
   }
