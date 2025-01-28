@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final TextEditingController controller;
@@ -26,7 +27,9 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
         controller: controller,
-        textInputAction: textInputAction,
+        textInputAction: defaultTargetPlatform == TargetPlatform.iOS
+            ? TextInputAction.done
+            : textInputAction,
         decoration: InputDecoration(
           labelText: labelText,
           labelStyle: const TextStyle(fontSize: 14),

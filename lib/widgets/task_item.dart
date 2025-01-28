@@ -24,7 +24,7 @@ class TaskCard extends StatelessWidget {
       elevation: 3,
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      color: isDateElapsed ? Colors.yellow[100] : Colors.white, // Warning color if date elapsed
+      color: isDateElapsed ? Colors.yellow[100] : Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
