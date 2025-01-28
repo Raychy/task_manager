@@ -1,10 +1,11 @@
 # Task Manager
 
-This project is a Task Manager application built with Flutter. The application allows users to create, edit, delete, and manage tasks. Tasks can have titles, descriptions, estimated hours to complete, and due dates. The application uses the `Provider` package for state management and `SharedPreferences` for local storage.
+The Task Manager App is a simple mobile application built with Flutter. It allows users to manage their tasks efficiently by providing functionalities such as adding, updating, deleting, and viewing tasks. The app also allows users to filter tasks by status (e.g., Pending or Completed).
+
 
 ## Features
 
-- Add new tasks with title, description, estimated hours, and due date.
+- Add new tasks with title, description(optional), estimated hours, and due date.
 - Edit existing tasks.
 - Delete tasks.
 - Mark tasks as completed.
@@ -54,8 +55,8 @@ This project is a Task Manager application built with Flutter. The application a
 
 ## Assumptions
 
-- The application assumes that tasks are stored locally and does not include backend integration.
-- The application assumes a simple user interface suitable for managing tasks on a single device.
-- The application uses `SharedPreferences` for local storage, which may not be suitable for large-scale or multi-user environments.
+- Each task has a field indicating how many hours are expected to be spent on completing it. This is useful for users to track their time and allocate effort towards tasks.
+- Each task has an associated due date that determines when the task is expected to be completed. The due date can be set by the user while adding or updating a task.
+- The app uses SharedPreferences for data persistence, saving tasks locally. When the app is restarted, it loads tasks from SharedPreferences and saves any updates or deletions.
 
 
